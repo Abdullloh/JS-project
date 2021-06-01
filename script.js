@@ -4,12 +4,8 @@ function datenow() {
   minutes = new Date().getMinutes();
   span.innerHTML = `${now}:${minutes}`;
 }
-let doctorImages = [
-  'https://cdn.pixabay.com/photo/2016/01/19/15/05/doctor-1149149__340.jpg',
-  'https://cdn.pixabay.com/photo/2020/02/06/07/55/money-4823268__340.jpg',
-  'https://cdn.pixabay.com/photo/2017/01/31/22/32/boy-2027768__340.png',
-]
 datenow();
+
 
 // ==================array =============================
 let doctorsInfo = [
@@ -271,7 +267,7 @@ let doctorsInfo = [
 let cityArray = [];
 doctorsInfo.forEach(item=>{
   const{city} = item.address;
-  const cityExist = cityArray.find(i=> i ===city);
+  const cityExist = cityArray.find(i=> i === city);
   if(!cityExist){
     cityArray.push(city)
   }
@@ -294,7 +290,7 @@ function citiRender(){
          let downBlock = document.getElementById('downBLock')
          const data = filteredUsers? filteredUsers:doctorsInfo;
          downBlock.innerHTML = '';
-        data.forEach(item=>{
+         data.forEach(item=>{
            const{name,address: { city },  company: { name: loca }} = item
            downBlock.innerHTML +=`
            <div id="info-container">
@@ -330,9 +326,9 @@ function filterUser(){
 }
 
 
-    function resetAll(){
-      document.querySelector('select').value ='';
-      document.getElementById('myInput').value ='';
-      userPrint()
-    }
+function resetAll(){
+  document.querySelector('select').value ='';
+  document.getElementById('myInput').value ='';
+  userPrint()
+}
 

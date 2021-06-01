@@ -21,8 +21,8 @@ main {
 }
 main section {
   overflow-y: scroll;
-  height: 558px;
-  width: 384px;
+  height: 100vh;
+  width: 100vw;
   border: 9px solid #cbd8f1;
   border-radius: 20px;
   outline: none;
@@ -69,7 +69,8 @@ main section #upBlock #block {
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: space-around;
+  padding: 0 10px;
+  justify-content: space-between;
 }
 main section #upBlock #blackBorder {
   height: 32px;
