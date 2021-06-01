@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="d-flex">
+      <section>
+          <div id="upBlock">
+        <div id="block">
+            <span onload="datenow()"></span>
+            <span id="blackBorder"></span>
+            <span><i class="fas fa-wifi"></i><i  style="margin-left: 5px;" class="fas fa-battery-full"></i></span>
+        </div>
+            <div style="margin-top: 15px;text-align: center;" id="citySelector">
+                <p style="font-size: 15px;">Select Area</p>
+                <select onchange="filterByCityName(event)" style="border: none;outline: none;margin-top: 5px;" name="" id="">
+                </select>
+            </div>
+          </div>
+          <div id="searcher">
+              <input type="text" id="myInput"  placeholder="Type Name">
+              <button onclick="filterUser()">Search</button>
+              <h4 style="cursor: pointer;" onclick="resetAll()" >See All</h4>
+          </div>
+          <div id="downBLock">
+             
+          </div>
+      </section>
+  </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
